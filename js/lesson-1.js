@@ -5,9 +5,9 @@
 // Якщо це так - виведіть 'так', інакше виведіть 'ні'.
 // const str = 'Abcde';
 // if (str.toLocaleLowerCase().startsWith('a')) {
-//     console.log('yes'); 
+//     console.log('yes');
 // } else {
-//   console.log('no');   
+//   console.log('no');
 // }
 // str.toLocaleLowerCase()[0] === 'a' ? console.log('yes') : console.log('no');
 
@@ -39,7 +39,6 @@
 
 // const age = +prompt('your age: ')
 
-
 // function checkAge (funkAge) {
 // let message = 'Error';
 
@@ -56,3 +55,30 @@
 // }
 
 // console.log(checkAge (age));
+
+//TODO: 4 ===================================
+//* Конструкція switch
+// Запитай користувача у модальному вікні, який з напоїв він бажає придбати - "Кава", "Чай" чи "Сік",
+// та залежно від виду напою оголоси суму досплати.Використовувати switch.
+
+// const drink = prompt(`Enter your drink`).toLowerCase().trim();
+
+// function orderDrink(drinkName) {
+//   switch (drinkName) {
+//     case 'coffee':
+//       return 'Your order 60 uah';
+
+//     case 'tea':
+//       return 'Your order 40 uah';
+
+//     case 'juice':
+//       return 'Your order 30 uah';
+
+//     default:
+//       return 'Error';
+//   }
+// }
+
+// console.log(orderDrink(drink));
+
+// console.log(orderDrink('coffee'));
