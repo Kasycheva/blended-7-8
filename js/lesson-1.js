@@ -56,3 +56,5 @@
 // }
 
 // console.log(checkAge (age));
+
+const eee = 2
