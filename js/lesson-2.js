@@ -60,3 +60,94 @@ function findLetter(arr, letter) {
   return insideArr;
 }
 // console.log(findLetter(stringArray, substring));
+
+
+//!  Літерал об'єкта
+//!  Властвості та методи об'єкта
+//TODO:============task-01=========================
+// Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
+// Послідовно:
+// 1 додати поле mood зі значенням 'happy'
+// 2 замінити hobby на 'skydiving'
+
+const human = {
+  userName: "Mango",
+  hobby: "football",
+  age: 75,
+  greet() {
+    // console.log(`Hello, ${this.userName}`);
+  },
+};
+
+// console.log(human.userName);
+
+// console.log(human["age"]);
+
+human.greet();
+
+human.mood = "happy";
+human.hobby = "skydiving";
+
+//console.log(human);
+
+// for (const key in human) {
+//   console.log(key);
+//   console.log(human[key]);
+// }
+
+// console.log(Object.keys(human));
+// console.log(Object.values(human));
+// console.log(Object.entries(human));
+
+const salaries = {
+  Denis: 3000,
+  Alisa: 3500,
+  Mykola: 4000,
+};
+
+let total = 0;
+
+// for (const key in salaries) {
+//   total += salaries[key];
+// }
+
+const values = Object.values(salaries);
+for (const item of values) {
+  total += item;
+}
+
+// console.log(total);
+
+//TODO:============task-2==============================
+// Створіть масив об'єктів "студентів" з властивостями "ім'я", "прізвище" та "середній бал".
+// Напишіть функцію "findTopStudent", яка буде повертати об'єкт студента з найвищим середнім балом.
+
+ const students = [
+  { name: 'Андрій', surname: 'Іванов', grade: 5 },
+  { name: 'Олександр', surname: 'Петров', grade: 3.9 },
+  { name: 'Марія', surname: 'Сидорова', grade: 5 },
+   { name: 'Ірина', surname: 'Федорова', grade: 4.2 },
+  {name: 'Микола', surname: 'Пупкін', grade: 4.8},
+ ];
+
+// function findTopStudent(students) {
+//   let topStudentGrade = students[0];
+  
+//   const topStudents = [];
+
+//   for (const student of students) {
+//     if (student.grade >= topStudentGrade.grade ) {
+     
+//       topStudentGrade = student;
+//       topStudents.push(student);
+     
+//     }
+//   }
+//   return topStudents;
+// }
+
+
+  
+// }
+//  console.log(findTopStudent(students));
+
