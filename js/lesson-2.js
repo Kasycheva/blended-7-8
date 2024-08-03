@@ -44,23 +44,22 @@ const substring = 'S';
 
 // другий варіант - рішення не досконале, виводить css 2 рази (пофіксили в другому if)
 
-function findLetter(arr, letter) {
-  const insideArr = [];
-  for (const item of arr) {
-    item.split('');
-    for (let i = 0; i < item.length; i += 1) {
-      if (item[i].includes(letter)) {
-        if (insideArr.includes(item)) {
-          continue;
-        }
-        insideArr.push(item);
-      }
-    }
-  }
-  return insideArr;
-}
+// function findLetter(arr, letter) {
+//   const insideArr = [];
+//   for (const item of arr) {
+//     item.split('');
+//     for (let i = 0; i < item.length; i += 1) {
+//       if (item[i].includes(letter)) {
+//         if (insideArr.includes(item)) {
+//           continue;
+//         }
+//         insideArr.push(item);
+//       }
+//     }
+//   }
+//   return insideArr;
+// }
 // console.log(findLetter(stringArray, substring));
-
 
 //!  Літерал об'єкта
 //!  Властвості та методи об'єкта
@@ -70,14 +69,14 @@ function findLetter(arr, letter) {
 // 1 додати поле mood зі значенням 'happy'
 // 2 замінити hobby на 'skydiving'
 
-const human = {
-  userName: "Mango",
-  hobby: "football",
-  age: 75,
-  greet() {
-    // console.log(`Hello, ${this.userName}`);
-  },
-};
+// const human = {
+//   userName: 'Mango',
+//   hobby: 'football',
+//   age: 75,
+//   greet() {
+//     console.log(`Hello, ${this.userName}`);
+//   },
+// };
 
 // console.log(human.userName);
 
@@ -85,8 +84,8 @@ const human = {
 
 human.greet();
 
-human.mood = "happy";
-human.hobby = "skydiving";
+human.mood = 'happy';
+human.hobby = 'skydiving';
 
 //console.log(human);
 
@@ -99,22 +98,22 @@ human.hobby = "skydiving";
 // console.log(Object.values(human));
 // console.log(Object.entries(human));
 
-const salaries = {
-  Denis: 3000,
-  Alisa: 3500,
-  Mykola: 4000,
-};
+// const salaries = {
+//   Denis: 3000,
+//   Alisa: 3500,
+//   Mykola: 4000,
+// };
 
-let total = 0;
+// let total = 0;
 
-// for (const key in salaries) {
-//   total += salaries[key];
+// // for (const key in salaries) {
+// //   total += salaries[key];
+// // }
+
+// const values = Object.values(salaries);
+// for (const item of values) {
+//   total += item;
 // }
-
-const values = Object.values(salaries);
-for (const item of values) {
-  total += item;
-}
 
 // console.log(total);
 
@@ -122,32 +121,61 @@ for (const item of values) {
 // Створіть масив об'єктів "студентів" з властивостями "ім'я", "прізвище" та "середній бал".
 // Напишіть функцію "findTopStudent", яка буде повертати об'єкт студента з найвищим середнім балом.
 
- const students = [
-  { name: 'Андрій', surname: 'Іванов', grade: 5 },
-  { name: 'Олександр', surname: 'Петров', grade: 3.9 },
-  { name: 'Марія', surname: 'Сидорова', grade: 5 },
-   { name: 'Ірина', surname: 'Федорова', grade: 4.2 },
-  {name: 'Микола', surname: 'Пупкін', grade: 4.8},
- ];
+// const students = [
+//   { name: 'Андрій', surname: 'Іванов', grade: 5 },
+//   { name: 'Олександр', surname: 'Петров', grade: 3.9 },
+//   { name: 'Марія', surname: 'Сидорова', grade: 3.2 },
+//   { name: 'Ірина', surname: 'Федорова', grade: 4.2 },
+//   { name: 'Микола', surname: 'Пупкін', grade: 4.8 },
+// ];
 
 // function findTopStudent(students) {
 //   let topStudentGrade = students[0];
-  
+
 //   const topStudents = [];
 
 //   for (const student of students) {
-//     if (student.grade >= topStudentGrade.grade ) {
-     
+//     if (student.grade > topStudentGrade.grade ) {
+
 //       topStudentGrade = student;
 //       topStudents.push(student);
-     
+
 //     }
 //   }
 //   return topStudents;
 // }
 
+// console.log(findTopStudent(students));
 
-  
+// ! Рішення
+
+const students = [
+  { name: 'Андрій', surname: 'Іванов', grade: 5 },
+  { name: 'Олександр', surname: 'Петров', grade: 3.9 },
+  { name: 'Марія', surname: 'Сидорова', grade: 5 },
+  { name: 'Ірина', surname: 'Федорова', grade: 4.2 },
+  { name: 'Микола', surname: 'Пупкін', grade: 4.8 },
+];
+function findTopStudents(students) {
+  let maxGrade = students[0].grade;
+
+  // Знайти максимальну оцінку серед усіх студентів
+  for (const student of students) {
+    if (student.grade > maxGrade) {
+      maxGrade = student.grade;
+    }
+  }
+
+  // Створити масив студентів з максимальною оцінкою
+  const topStudents = [];
+  for (const student of students) {
+    if (student.grade === maxGrade) {
+      topStudents.push(student);
+    }
+  }
+
+  return topStudents;
+}
+
 // }
-//  console.log(findTopStudent(students));
-
+console.log(findTopStudents(students));
