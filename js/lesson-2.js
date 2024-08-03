@@ -23,3 +23,40 @@
 // for (let index = 0; index < styles.length; index++) {
 //   console.log(`${index + 1} : ${styles[index]}`);
 // }
+
+//TODO:=========task-02=================
+// Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." .Результат повинен бути розділений комами та пробілами.(використати indexOf)
+
+const stringArray = ['JavaScript', 'HTML', 'CSS', 'React'];
+const substring = 'S';
+
+// const newStringArray = [];
+// for (const element of stringArray) {
+//   if (element.includes(substring)) {
+//     newStringArray.push(element);
+//   }
+// }
+// console.log(
+//   `Масив елементів, що містять підстроку ${substring} : ${newStringArray.join(
+//     ', '
+//   )}`
+// );
+
+// другий варіант - рішення не досконале, виводить css 2 рази (пофіксили в другому if)
+
+function findLetter(arr, letter) {
+  const insideArr = [];
+  for (const item of arr) {
+    item.split('');
+    for (let i = 0; i < item.length; i += 1) {
+      if (item[i].includes(letter)) {
+        if (insideArr.includes(item)) {
+          continue;
+        }
+        insideArr.push(item);
+      }
+    }
+  }
+  return insideArr;
+}
+// console.log(findLetter(stringArray, substring));
