@@ -179,3 +179,29 @@ function findTopStudents(students) {
 
 // }
 console.log(findTopStudents(students));
+
+
+// Друге рішення (Денис)
+function findTopStudent(studentsInside){
+let total = 0;
+const arr = [];
+
+//знаходимо максимальний бал
+const maxArr = [];
+for (let i = 0; i < studentsInside.length; i+=1){
+	maxArr.push(studentsInside[i].grade)
+}
+const max = Math.max(...maxArr);
+
+for(const student of studentsInside){
+	if (student.grade >= total){
+		total = student.grade
+		if (student.grade >= max){
+			arr.push(student)
+		}
+	}
+}
+return arr
+}
+
+console.log(findTopStudent(students));
