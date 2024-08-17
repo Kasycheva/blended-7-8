@@ -23,7 +23,6 @@
 //TODO:=========task-01=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
 
-
 // const getNewArray = (arr) => arr.map( item => Math.pow(item, 2));
 
 // const res = getNewArray([1, 2, 3, 4, 5]);
@@ -45,7 +44,6 @@
 
 //TODO:=========task-03=================
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}. Перевірте, чи є хоча б один об'єкт з віком менше 20 років. Очікуваний результат: true.
-
 
 // const checkAge = (arr) => arr.some(({age}) => age < 20)
 
@@ -71,7 +69,6 @@
 //TODO:=========task-05=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Знайдіть перший елемент, більший за 3. Очікуваний результат: 4.
 
-
 // const getNumber = (arr) => arr.find(item => item > 3)
 
 // const numbers = [1, 2, 3, 4, 5];
@@ -84,6 +81,8 @@
 
 // const numbersArray = [4, 2, 5, 1, 3];
 
+// const sortedArray = arr => arr.toSorted((a, b) => a - b);
+
 // const res = sortedArray(numbersArray);
 // console.log(res);
 
@@ -91,6 +90,7 @@
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
 
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// const sortedArray = arr => arr.toSorted((a, b) => a.localeCompare(b));
 
 // const res = sortedArray(stringArray);
 // console.log(res);
@@ -103,7 +103,7 @@
 //   { name: 'Jane', age: 31 },
 //   { name: 'Bob', age: 19 },
 // ];
-
+// const getAge = arr => arr.filter(item => item.age > 20);
 // const res = getAge(user, 25);
 // console.log(res);
 
@@ -111,7 +111,7 @@
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
 // const numbers = [1, 2, 3, 4, 5];
-
+// const sum = arr => arr.reduce((acc, item) => (acc += item), 0);
 // const res = sum(numbers);
 // console.log(res);
 
@@ -198,4 +198,4 @@
 //   'male',
 //   'bob@hmail.com'
 // );
-// console.log(employee.getEmployeeDetails());  
+// console.log(employee.getEmployeeDetails());
