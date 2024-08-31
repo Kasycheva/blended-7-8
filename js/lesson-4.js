@@ -69,5 +69,102 @@ function createMarkup(array) {
     .join('');
 }
 
-const filmsList = document.querySelector('.films-list');
-filmsList.insertAdjacentHTML('afterbegin', createMarkup(films));
+// const filmsList = document.querySelector('.films-list');
+// filmsList.insertAdjacentHTML('afterbegin', createMarkup(films));
+
+// // const li = filmsList.querySelectorAll('li');
+
+// // li.forEach((li)=>{
+// // li.addEventListener('click', oneClick)
+// // })
+
+// const p = filmsList.querySelectorAll('p');
+
+// p.forEach(p => {
+// 	p.classList.add('color-red');
+// });
+
+// filmsList.addEventListener('click', oneClick);
+
+// function oneClick (event){
+// 	if(event.target.nodeName !== "IMG"){
+// 		return;
+// 	}
+// 	// console.log(event.currentTarget);
+// 	// console.log(event.target);
+// event.target.style.opacity = '0.5'
+// }
+
+const form = document.querySelector('.js-contact-form');
+
+
+
+//  form.elements.userName.addEventListener('blur', handlerInput);
+
+//  function handlerInput (evt){
+// 	const name = evt.target.value.trim();
+// 		if(name.length < 3){
+// 		evt.target.style.outline = '3px solid red'
+// 	}else{
+// 		evt.target.style.outline = '3px solid green'
+// 	}
+//  }
+
+
+
+// form.addEventListener('submit', handlerSubmit);
+// form.addEventListener('input', handlerInput);
+// form.elements.accept.addEventListener('click', handlerClick);
+
+// function handlerSubmit (e){
+// 	e.preventDefault();
+// 	const {userName, accept} = e.currentTarget.elements;
+// const userData = {
+// 	name: userName.value.trim(),
+
+// }
+// if(accept.checked){
+// 	console.log(userData)
+// 	e.currentTarget.reset()
+// }
+
+// }
+
+
+// function handlerInput (evt){
+// 	const name = evt.target.value.trim();
+// 	if(name.length < 3){
+// 		evt.target.style.outline = '3px solid red'
+// 	}else{
+// 		evt.target.style.outline = '3px solid green'
+// 	}
+// }
+
+// function handlerClick (evt){
+// 	const input = form.elements.userName.value.trim()
+// 	const btn = form.querySelector('.js-contact-form-submit')
+// 	if(evt.target.checked && input.length > 3){
+// 		btn.disabled = false
+// 	}
+// }
+
+
+
+form.addEventListener('submit', handlerSubmit);
+
+function handlerSubmit (e){
+	e.preventDefault();
+	const {userName, accept} = e.currentTarget.elements;
+	if(!userName.value.trim() || !accept.checked ){
+		return alert('some field is empty')
+	}
+
+	const userData = {
+	name: userName.value.trim(),
+
+	}
+
+	console.log(userData)
+	e.currentTarget.reset()
+
+}

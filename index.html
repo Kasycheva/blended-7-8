@@ -8,6 +8,27 @@
   </head>
   <body>
     <ul class="films-list"></ul>
+	<form class="contact-form js-contact-form">
+		<input
+		  name="userName"
+		  type="text"
+		  class="contact-form-input js-username-input"
+		  data-length="8"
+		  placeholder="Your name"
+		/>
+		<label class="js-policy-label">
+		  <input
+			type="checkbox"
+			name="accept"
+			class="contact-form-checkbox js-policy-checkbox"
+		  />
+		  Я <span class="js-username-output">Anonymous</span> погоджуюсь із політикою
+		  конфіденційності
+		</label>
+		<button type="submit" class="contact-form-btn js-contact-form-submit">
+		  Відправити
+		</button>
+	  </form>
     <!-- <script type="module" src="./js/lesson-1.js"></script>
     <script type="module" src="./js/lesson-2.js"></script> -->
     <!-- <script type="module" src="./js/lesson-3.js"></script> -->
