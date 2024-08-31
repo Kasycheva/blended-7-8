@@ -124,29 +124,59 @@
  * - методи add, substruct, divide, multiply
  * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
  */
+// class Calculator{
+//   constructor() {
+//     this.result = 0;
+//   }
+//   number(number) {
+//     this.result = number;
+//     return this;
+//   }
+//   getResult() {
+//     return this.result;
+//   }
 
-// const calculator = new Calculator();
-// console.log(calculator);
+//   add(a) {
+//     this.result += a;
+//     return this;
+//   }
+//   substruct(a) {
+//     this.result -= a;
+//     return this;
+//   }
+//   divide(a) {
+//     this.result /= a;
+//     return this;
+//   }
+//   multiply(a) {
+//     this.result *= a;
+//     return this;
+//   }
+//  }
 
-// const res = calculator
-//   .number(10)
-//   .add(10)
-//   .divide(2)
-//   .multiply(4)
-//   .substruct(5)
-//   .getResult();
 
-// console.log(res);
+//  const calculator = new Calculator();
+//  console.log(calculator.result);
 
-// const res2 = calculator
-//   .number(20)
-//   .substruct(40)
-//   .multiply(-8)
-//   .divide(160)
-//   .add(20)
-//   .getResult();
+//  const res = calculator
+//    .number(10)
+//    .add(10)
+//    .divide(2)
+//    .multiply(4)
+//    .substruct(5)
+//    .getResult();
 
-// console.log(res2);
+//  console.log(res);
+
+//  const res2 = calculator
+//    .number(20)
+//    .substruct(40)
+//    .multiply(-8)
+//    .divide(160)
+//    .add(20)
+//    .getResult();
+
+//  console.log(res2);
 
 //! Приватні властивості
 //TODO:=========task-02=================
@@ -155,13 +185,37 @@
  *
  * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
  */
+// class Client{
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+//   get getEmail(){
+//     return this.#email;
+//   }
+//   set changeEmail(newEmail){
+//     this.#email = newEmail;
+//   }
+//     get getLogin(){
+//     return this.#login;
+//   }
+//   set changeLogin(newLogin){
+//     this.#login = newLogin;
+// }
 
-// const client = new Client('Mango', 'mango@gmail.com');
+// }
 
-// client.changeEmail = 'mango555@gmail.com';
+
+//  const client = new Client('Mango', 'mango@gmail.com');
 // console.log(client.getEmail);
-// client.changeLogin = '12345';
 // console.log(client.getLogin);
+
+//  client.changeEmail = 'mango555@gmail.com';
+//  console.log(client.getEmail);
+//  client.changeLogin = '12345';
+//  console.log(client.getLogin);
 
 //! Практика наслідування у класах.
 //TODO:=========task-03=================
