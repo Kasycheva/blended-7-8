@@ -97,8 +97,6 @@ function createMarkup(array) {
 
 const form = document.querySelector('.js-contact-form');
 
-
-
 //  form.elements.userName.addEventListener('blur', handlerInput);
 
 //  function handlerInput (evt){
@@ -109,8 +107,6 @@ const form = document.querySelector('.js-contact-form');
 // 		evt.target.style.outline = '3px solid green'
 // 	}
 //  }
-
-
 
 // form.addEventListener('submit', handlerSubmit);
 // form.addEventListener('input', handlerInput);
@@ -130,7 +126,6 @@ const form = document.querySelector('.js-contact-form');
 
 // }
 
-
 // function handlerInput (evt){
 // 	const name = evt.target.value.trim();
 // 	if(name.length < 3){
@@ -148,23 +143,30 @@ const form = document.querySelector('.js-contact-form');
 // 	}
 // }
 
-
-
 form.addEventListener('submit', handlerSubmit);
 
-function handlerSubmit (e){
-	e.preventDefault();
-	const {userName, accept} = e.currentTarget.elements;
-	if(!userName.value.trim() || !accept.checked ){
-		return alert('some field is empty')
-	}
+function handlerSubmit(e) {
+  e.preventDefault();
+  const { userName, accept } = e.currentTarget.elements;
+  if (!userName.value.trim() || !accept.checked) {
+    return alert('some field is empty');
+  }
 
-	const userData = {
-	name: userName.value.trim(),
+  const userData = {
+    name: userName.value.trim(),
+  };
 
-	}
-
-	console.log(userData)
-	e.currentTarget.reset()
-
+  console.log(userData);
+  e.currentTarget.reset();
+}
+const ulEl = document.querySelector('.js-accordion-list');
+ulEl.addEventListener('click', onClick);
+function onClick(evt) {
+  if (evt.target.nodeName !== 'BUTTON') {
+    return;
+  }
+  evt.target.nextElementSibling.classList.toggle('active');
+  // console.log(evt.target);
+  // if (evt.target.textContent === 'Item 2') {
+  // }
 }
