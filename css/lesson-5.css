@@ -133,3 +133,100 @@ input:checked + .round::before {
 body.dark h2 {
   color: #f2f2f2;
 }
+
+/* calendar */
+.calendar-container {
+	background-color: white;
+	width: 300px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	margin: 0 auto;
+  }
+  
+  .month-name {
+	text-transform: capitalize;
+	margin: 0;
+	background-color: orangered;
+	color: white;
+	padding: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+  }
+  
+  .day-name {
+	text-transform: capitalize;
+	font-size: 20px;
+	color: darkgray;
+  }
+  
+  .day-number {
+	font-size: 80px;
+	margin: 0;
+	font-weight: bold;
+  }
+  
+  .year {
+	margin: 20px 0;
+	font-size: 20px;
+	color: darkgray;
+	font-weight: 500;
+  }
+
+  h1,
+h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0062cc;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
